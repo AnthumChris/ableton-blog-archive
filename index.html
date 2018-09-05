@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>Ableton Blog Archive Filter</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        font-family: 'Open Sans', arial, sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        padding: 1rem;
+      }
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+
+      nav {
+        font-size: .8em;
+      }
+      nav a {
+        display: inline-block;
+        padding: .25em .5em;
+        border-bottom: 2px solid transparent;
+      }
+      nav a.active {
+        border-color: blue;
+      }
+
+      table {
+        margin: 0 0 1rem;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+      }
+      table td {
+        /*border: 1px solid #ccc;*/
+        padding: .25em 1em;
+        vertical-align: top;
+      }
+      table tr:nth-child(even) {
+        background: #f0f0f0;
+      }
+      table .date,
+      table .cat,
+      table .tags {
+        font-size: .8em;
+        white-space: nowrap;
+      }
+      table .tags,
+      table .desc {
+        font-size: .8em;
+        white-space: normal;
+      }
+      table .tags {
+        width: 15%;
+      }
+
+      table .title {
+        width: 80%;
+      }
+      table .title a {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: .25em;
+        font-weight: 600;
+      }
+
+      .results {
+        font-weight: 600;
+        font-size: 0.8rem;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="years">Year: </div>
+      <div id="types">Type: </div>
+    </nav>
+    <main>
+      <div class="results"><span id="results">0</span> blog entries found</div>
+      <table>
+        <tbody>
+      </table>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
